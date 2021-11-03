@@ -12,6 +12,6 @@ $registro = array(
 $resultado=$tb->insertOne($registro);
 
 echo $resultado->getInsertedId();
-echo json_encode($resultado);
+echo json_encode($registro);
 
 ?>
