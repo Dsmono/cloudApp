@@ -14,11 +14,11 @@ $resultado=$tb->insertOne($registro);
 
 
 echo json_encode($registro);*/
-$client = new MongoDB\Client('mongodb+srv://yo:abc13579@cluster0.bosd3.mongodb.net/water?retryWrites=true&w=majority');
+$client = new MongoDB\Client('mongodb+srv://jaun:123456@cluster0.bosd3.mongodb.net/water?retryWrites=true&w=majority');
 $tb=$client->lluvia->pre;
 $filter= ['$and'=>
             [
-                ['ANNO'=>['$eq'=>'1995']],
+                ['siete'=>['$eq'=>'1995']],
                 ['uno'=>['$eq'=>'Pajas Blancas']]
             ]
         ];
