@@ -14,7 +14,7 @@ $resultado=$tb->insertOne($registro);
 
 
 echo json_encode($registro);*/
-$client = new MongoDB\Client('mongodb+srv://jaun:123456@cluster0.bosd3.mongodb.net/water?retryWrites=true&w=majority');
+$client = new MongoDB\Client('mongodb+srv://jaun:123456a@cluster0.bosd3.mongodb.net/water?retryWrites=true&w=majority');
 $tb=$client->lluvia->pre;
 $filter= ['$and'=>
             [
