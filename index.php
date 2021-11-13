@@ -9,7 +9,7 @@ $tb=$client->emergencia->dano;
 $filter= ['$and'=>
             [
                 ['DEPARTAMENTO'=>['$eq'=>'ANTIOQUIA']],
-                ['EVENTO'=>['$eq'=>'INCENDIO ESTRUCTURAL']],
+                
                 
             ]
             ];
