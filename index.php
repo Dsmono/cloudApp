@@ -9,7 +9,7 @@ $client = new MongoDB\Client('mongodb+srv://jaun:123456a@cluster0.0jfro.mongodb.
 $tb=$client->emergencia->danos;
 $filter= ['$and'=>
             [
-                ['DEPARTAMENTO'=>['$eq'=>'ANTIOQUIA']],
+                ['CASA'=>['$eq'=>'ANTIOQUIA']],
                 
             ]
             ];
