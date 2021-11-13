@@ -30,7 +30,7 @@ $filter= ['$and'=>
                 ['DEPARTAMENTO'=>['$eq'=>'ANTIOQUIA']],
                 ['EVENTO'=>['$'=>'INCENDIO']]
             ]
-        ];
+            ];
 $query = new MongoDB\Driver\Query($filter);
 $rows = $tb->find($filter);
 $datos= iterator_to_array($rows);
