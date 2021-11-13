@@ -1,9 +1,8 @@
 <?php
 
 require_once __DIR__. '/vendor/autoload.php';
-
-//$a=$_GET['DEPARTAMENTO'];
-//$b=$_GET['EVENTO'];
+$a=$_GET['DEPARTAMENTO'];
+$b=$_GET['EVENTO'];
 
 $client = new MongoDB\Client('mongodb+srv://jaun:123456a@cluster0.0jfro.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 $tb=$client->emergencia->dano;
