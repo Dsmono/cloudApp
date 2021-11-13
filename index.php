@@ -7,7 +7,7 @@ require_once __DIR__. '/vendor/autoload.php';
 
 $client = new MongoDB\Client('mongodb+srv://jaun:123456a@cluster0.0jfro.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 $tb=$client->emergencia->danos;
-$filter= ['$and'=>
+$filter= [
             [
                 ['DEPARTAMENTO'=>['$eq'=>'ANTIOQUIA']],
                 
