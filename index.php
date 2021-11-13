@@ -16,13 +16,19 @@ $registro = array(
 $resultado=$tb->insertOne($registro);
 
 
+    $client = new MongoDB\Client('mongodb+srv://jaun:123456a@cluster0.0jfro.mongodb.net/ServiciosMul?retryWrites=true&w=majority');
+
+$db = $client->test;
+
+
+
 echo json_encode($registro);*/
-$client = new MongoDB\Client('mongodb+srv://jaun:123456a@cluster0.0jfro.mongodb.net/ServiciosMul?retryWrites=true&w=majority');
-$tb=$client->lluvia->pre;
-$filter= ['$and'=>
+$client = new MongoDB\Client('mongodb+srv://jaun:123456a@cluster0.0jfro.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
+$tb=$client->emergencia->danos
+$filter= ['$or'=>
             [
-                ['siete'=>['$eq'=>'1995']],
-                ['uno'=>['$eq'=>'Pajas Blancas']]
+                ['DEPARTAMENTO'=>['$eq'=>'ANTIOQUIA']],
+                ['EVENTO'=>['$'=>'INCENDIO']]
             ]
         ];
 $query = new MongoDB\Driver\Query($filter);
