@@ -10,7 +10,7 @@ $tb=$client->emergencia->danos;
 $filter= ['$and'=>
             [
                 ['DEPARTAMENTO'=>['$eq'=>'ANTIOQUIA']],
-                ['EVENTO'=>['$'=>'INCENDIO']]
+                ['EVENTO'=>['$eq'=>'INCENDIO']]
             ]
             ];
 $query = new MongoDB\Driver\Query($filter);
