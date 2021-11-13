@@ -6,9 +6,9 @@ $b=$_GET['EVENTO'];
 
 $client = new MongoDB\Client('mongodb+srv://jaun:123456a@cluster0.0jfro.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 $tb=$client->emergencia->dano;
-$filter= ['$and'=>
+$filter= ['$not'=>
             [
-                ['DEPARTAMENTO'=>['$eq'=>'ANTIOQUIA']],
+                ['DEPARTAMENTO'=>['$eq'=>'a']],
                 
                 
             ]
