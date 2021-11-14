@@ -1,16 +1,16 @@
 <?php
 
 require_once __DIR__. '/vendor/autoload.php';
-
-$a=$_GET['MUNICIPIO'];
+$a=$_GET['DEPARTAMENTO'];
+$b=$_GET['MUNICIPIO'];
 $b=$_GET['EVENTO'];
 
 $client = new MongoDB\Client('mongodb+srv://jaun:123456a@cluster0.0jfro.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 $tb=$client->emergencia->dano;
 $filter= ['$and'=>
             [
-                
-                ['EVENTO'=>['$eq'=>$a]],
+                ['DEPARTAMENTO'=>['$eq'=>$a]],
+                ['EVENTO'=>['$eq'=>$b]],
                 ['SUBSIDIO DE ARRIENDO'=>['$eq'=>'0']],
                 
             ]
